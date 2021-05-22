@@ -1,7 +1,11 @@
 # Lines
+A simple language based on a one-dimensional 16-bit unsigned integer array.  
+The language takes inspiration from the [Brainfuck](https://en.wikipedia.org/wiki/Brainfuck) language, although it differs in a few major ways.
+
+Lines is capable of modifying cells in the array using simple yet powerful core [operators](#operators).
 
 # Syntax
-Each line begins with a [label](#labels). After which can exist a set of [operators](#operators) referring to the line label.
+Each line begins with a [label](#labels). After which can exist a set of [operators](#operators) referring to the line label.  
 The language could be written using no spaces at all, although line breaks are needed to distinguish between different lines.
 
 ## Operators
