@@ -28,10 +28,11 @@ Subtracts `X` from the current cell, numbers are signed.
 ```
 
 ### Repeat `rX`
-Repeats the line another `X-1` times.
+Repeats the upcoming content after the repeat `X-1` times.
+If no operator is present after the repeat statement, an error wil be shown. 
 ```
 ; Equivalent to writing 'a1' 3 times, or 'a3'.
-1 a1 r3
+1 r3 a1
 ; [0, 3, 0, ..., 0]
 ```
 
@@ -114,7 +115,7 @@ We can continue by multiplying the two numbers into the `13-20` cells.
 Multiplication is a set of sums, thus it's easy to implement, using the `add` and `repeat` operators.
 In order to multiply `X` and `Y`, we would have to add `X` to itself `Y` times. Let's write that.
 ```
-13,8 a0,4 r4,4
+13,8 r4,4 a0,4
 ```
 
 Let's print the multiplication, by using the `p` operator.
@@ -132,7 +133,7 @@ To sum up, this is the final calculator code.
 ; Print the sum
 8,4 p
 ; Multiply the two numbers
-13,8 a0,4 r4,4
+13,8 r4,4 a0,4
 ; Print the multiplication
 13,8 p
 ```
