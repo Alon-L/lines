@@ -97,7 +97,7 @@ Operators running inside ranged-labeled lines, would refer to the combination of
 ### Calculator
 Our calculator should be able to sum, and multiply two 32-bit unsigned integers.
 
-First, the calculator should input two 32-bit unsigned integers, by using the `i4` operator.
+First, the calculator should input two 32-bit unsigned integers, by using the `input` operator.
 ```
 0,4 i
 4,4 i
@@ -109,7 +109,7 @@ We wil continue by summing these two numbers into the `8-12` cells.
 8,4 a0,4 a4,4
 ```
 
-Let's print the sum, by using the `p` operator.
+Let's print the sum, by using the `print` operator.
 ```
 8,4 p
 ```
@@ -122,7 +122,7 @@ In order to multiply `X` and `Y`, we would have to add `X` to itself `Y` times. 
 13,8 r4,4 a0,4
 ```
 
-Let's print the multiplication, by using the `p` operator.
+Let's print the multiplication, by using the `print` operator.
 ```
 13,8 p
 ```
