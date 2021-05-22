@@ -44,7 +44,7 @@ Prints the current cell.
 1 p
 ```
 
-### Input `iX`
+### Input `i`
 Takes input into the current cell. Pads the input with `0`s if needed.
 ```
 ; Inserts the input into the '1' cell.
