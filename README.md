@@ -28,7 +28,7 @@ Subtracts `X` from the current cell, numbers are signed.
 ```
 
 ### Repeat `rX`
-Repeats the upcoming content after the repeat `X-1` times.
+Repeats the upcoming operators after the repeat statement `X` times.
 If no operator is present after the repeat statement, an error wil be shown. 
 ```
 ; Equivalent to writing 'a1' 3 times, or 'a3'.
