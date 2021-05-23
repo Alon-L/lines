@@ -24,7 +24,7 @@ Adds `X` to the current cell.
 ```
 
 ### Subtract `sX`
-Subtracts `X` from the current cell, numbers are signed.
+Subtracts `X` from the current cell. Numbers are signed.
 ```
 1 a3
 1 s1
@@ -33,7 +33,7 @@ Subtracts `X` from the current cell, numbers are signed.
 
 ### Repeat `rX`
 Repeats the upcoming operators after the repeat statement `X` times.
-If no operator is present after the repeat statement, an error wil be shown. 
+If no operator is present after the repeat statement, an error will be thrown. 
 ```
 ; Equivalent to writing 'a1' 3 times, or 'a3'.
 1 r3 a1
@@ -57,7 +57,7 @@ Takes input into the current cell. Pads the input with `0`s if needed.
 1 p
 ```
 
-### Range `X,Y`
+## Range `X,Y`
 Takes the content of the `X` cell, and the next `Y` cells, including the `X` cell.
 ```
 ; Equivalent to adding '1 + 2 + 3' to the '4' cell.
