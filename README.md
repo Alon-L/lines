@@ -24,7 +24,7 @@ Adds `X` to the current cell.
 ```
 
 ### Subtract `sX`
-Subtracts `X` from the current cell. Numbers are signed.
+Subtracts `X` from the current cell. Negative numbers refer to their 2-complement representation.
 ```
 1 a3
 1 s1
