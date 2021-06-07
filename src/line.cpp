@@ -15,7 +15,13 @@ Line::Line(int num, const string &content) {
 }
 
 void Line::RemoveWhitespaces() {
-    content_ws.erase(remove_if(content_ws.begin(), content_ws.end(), isspace), content_ws.end());
+    content_ws.erase(
+            remove_if(
+                    content_ws.begin(),
+                    content_ws.end(),
+                    [](char c) { return std::isspace(static_cast<unsigned char>(c)); }
+            ), content_ws.end()
+    );
 }
 
 string Line::GetContent() {
