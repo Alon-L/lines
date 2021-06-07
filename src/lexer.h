@@ -19,10 +19,9 @@ private:
 
     Value FindValue(const string& word);
 
-    LabelRange* FindLabel(const string& label);
-    LabelToken* LabelToken();
-
-    OperatorToken* OperatorToken();
+    LabelRange* FindLabelRange(const string& label);
+    LabelToken* FindLabelToken();
+    OperatorToken* FindOperatorToken();
 
     uint64_t string_to_ull(const string &str);
     uint32_t string_to_ul(const string &str);

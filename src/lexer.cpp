@@ -9,10 +9,10 @@ Lexer::Lexer(int num, const string &line) {
 Token *Lexer::NextToken() {
     if (isdigit(line->CurrentChar())) {
         // The token is a label
-        return this->LabelToken();
+        return this->FindLabelToken();
     } else {
         // The token is an operator
-        return this->OperatorToken();
+        return this->FindOperatorToken();
     }
 }
 
@@ -20,7 +20,7 @@ Token *Lexer::NextToken() {
 Value Lexer::FindValue(const string &word) {
     if (word.find(',') < word.length()) {
         /* The value is a label */
-        return this->FindLabel(word);
+        return this->FindLabelRange(word);
     } else {
         /* The value is a number */
         return string_to_ull(word);
@@ -28,7 +28,7 @@ Value Lexer::FindValue(const string &word) {
 }
 
 /* Finds the label range for a given label string. */
-LabelRange *Lexer::FindLabel(const string &label) {
+LabelRange *Lexer::FindLabelRange(const string &label) {
     auto comma = label.find(',');
 
     if (comma == std::string::npos) {
@@ -49,15 +49,15 @@ LabelRange *Lexer::FindLabel(const string &label) {
 }
 
 /* Returns the label token for the next word. */
-LabelToken *Lexer::LabelToken() {
+LabelToken *Lexer::FindLabelToken() {
     string word = line->NextWord();
-    LabelRange *range = this->FindLabel(word);
+    LabelRange *range = this->FindLabelRange(word);
 
     return new class LabelToken(range);
 }
 
 /* Returns the operator token for the next word. */
-OperatorToken *Lexer::OperatorToken() {
+OperatorToken *Lexer::FindOperatorToken() {
     string word = line->NextWord();
     char op_name = word[0];
     string op_value = word.substr(1);

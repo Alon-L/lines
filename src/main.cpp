@@ -57,9 +57,9 @@ int main(int argc, char *argv[]) {
         Token* token = lexer.NextToken();
 
         if (token->GetType() == TOKEN_LABEL) {
-            auto t = dynamic_cast<LabelToken *>(token);
+            auto t = dynamic_cast<FindLabelToken *>(token);
         } else if (token->GetType() == TOKEN_OPERATOR) {
-            auto t = dynamic_cast<OperatorToken *>(token);
+            auto t = dynamic_cast<FindOperatorToken *>(token);
 
             if (t->value.has_value()) {
                 auto v = t->value.value();
