@@ -1,0 +1,5 @@
+# IDE specific configuration
+.idea
+
+# Build
+cmake-build-debug
