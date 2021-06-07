@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <cctype>
 #include "line.h"
 
 Line *g_line;
@@ -19,7 +20,7 @@ void Line::RemoveWhitespaces() {
             remove_if(
                     content_ws.begin(),
                     content_ws.end(),
-                    [](char c) { return std::isspace(static_cast<unsigned char>(c)); }
+                    [](char c) { return isspace(static_cast<unsigned char>(c)); }
             ), content_ws.end()
     );
 }
