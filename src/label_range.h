@@ -2,6 +2,7 @@
 #define LINES_LABEL_RANGE_H
 
 #include <variant>
+#include <cstdint>
 
 class LabelRange {
 private:
