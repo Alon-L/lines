@@ -53,7 +53,7 @@ void Interpreter::InterpretOperator(OperatorToken *token) {
 
     // Validate that the argument is present (if required)
     if (!op->ValidateArgs()) {
-        this->Error("An argument was expected but not present");
+        this->Error("An incorrect number of arguments were presented");
     }
 
     uint64_t ret = op->Execute();

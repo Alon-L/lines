@@ -10,9 +10,10 @@ typedef std::optional<Value> OpValue;
 
 class Operator {
 protected:
+    OpValue _value;
     LabelRange *label;
 public:
-    explicit Operator(LabelRange *label);
+    Operator(LabelRange* label, OpValue value);
 
     virtual bool ValidateArgs();
 

@@ -1,9 +1,10 @@
 #include "operator.h"
 
 bool Operator::ValidateArgs() {
-    return true;
+    return !_value.has_value();
 }
 
-Operator::Operator(LabelRange* label) {
+Operator::Operator(LabelRange* label, OpValue value) {
     this->label = label;
+    this->_value = value;
 }

@@ -5,7 +5,7 @@
 
 class OperatorPrint : public Operator {
 public:
-    explicit OperatorPrint(LabelRange *label);
+    OperatorPrint(LabelRange* label, OpValue value);
 
     uint64_t Execute() override;
 };

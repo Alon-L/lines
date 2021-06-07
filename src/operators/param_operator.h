@@ -4,8 +4,6 @@
 #include "operator.h"
 
 class ParamOperator : public Operator {
-private:
-    OpValue _value;
 protected:
     Value value;
 public:

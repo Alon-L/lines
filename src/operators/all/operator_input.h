@@ -5,7 +5,7 @@
 
 class OperatorInput : public Operator {
 public:
-    explicit OperatorInput(LabelRange *label);
+    OperatorInput(LabelRange *label, OpValue value);
 
     uint64_t Execute() override;
 };

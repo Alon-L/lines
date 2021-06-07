@@ -21,9 +21,9 @@ namespace Operators {
             case OP_REPEAT:
                 return new OperatorRepeat(label, value);
             case OP_PRINT:
-                return new OperatorPrint(label);
+                return new OperatorPrint(label, value);
             case OP_INPUT:
-                return new OperatorInput(label);
+                return new OperatorInput(label, value);
             default:
                 return nullptr;
         }
