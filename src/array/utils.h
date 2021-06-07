@@ -1,6 +1,7 @@
 #ifndef LINES_UTILS_H
 #define LINES_UTILS_H
 
+#include <cstdint>
 #include "array.h"
 #include "../label_range.h"
 

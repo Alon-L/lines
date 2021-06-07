@@ -3,6 +3,7 @@
 
 #include <string>
 #include <variant>
+#include <cstdint>
 #include "line.h"
 #include "label_range.h"
 #include "token/token.h"

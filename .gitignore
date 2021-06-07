@@ -2,5 +2,6 @@
 .idea
 
 # Build
+build
 cmake-build-debug
 cmake-build-release
