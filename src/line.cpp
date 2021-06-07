@@ -2,8 +2,6 @@
 #include <cctype>
 #include "line.h"
 
-Line *g_line;
-
 Line::Line(int num, const string &content) {
     this->num = num;
     this->pos = 0;
