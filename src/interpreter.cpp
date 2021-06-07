@@ -68,6 +68,10 @@ void Interpreter::InterpretOperator(OperatorToken *token) {
 
 /* Repeats the next tokens 'num' times */
 void Interpreter::InterpretRepeat(uint64_t num) {
+    if (line->GetEnded()) {
+        this->Error("No operators were present after the repeat operator");
+    }
+
     int pos_ws = line->GetWSPos();
     int pos = line->GetPos();
 
