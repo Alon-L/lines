@@ -1,7 +1,6 @@
 #ifndef LINES_INTERPRETER_H
 #define LINES_INTERPRETER_H
 
-#include <stack>
 #include "lexer.h"
 #include "operators/all/operator_repeat.h"
 
@@ -11,12 +10,6 @@ private:
     Line* line;
     LabelRange* label;
 public:
-    /*
-     * TODO: Repeat operator: push repeat value into stack
-     * TODO: When reading tokens and finding a 'repeat' operator, pop the repeat value from the stack, and iterate the next tokens for that value
-     */
-    stack<int> repeats;
-
     explicit Interpreter(Lexer* lexer);
 
     void Interpret();
