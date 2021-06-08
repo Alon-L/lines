@@ -10,28 +10,14 @@ int main(int argc, char *argv[]) {
         return EXIT_FAILURE;
     }
 
+    // Initialize the array
     create_array();
-
-    /*LabelRange range(0, 1);
-    Utils::modify_cells(&range, -10);
-
-    for (int i = 0; i < 8; ++i) {
-        std::bitset<8> x(g_arr[i]);
-        std::cout << x << std::endl;
-    }
-
-    std::cout << Utils::get_cells_value(&range) << std::endl;
-
-    Value range2 = new LabelRange(0, 5);
-    LabelRange range3(6, 5);
-    Utils::modify_cells(&range3, range2);
-
-    std::cout << Utils::get_cells_value(&range3) << std::endl;*/
 
     string filename = argv[1];
     int line_num = 1;
     string line;
 
+    // Open the file received from the command line params
     ifstream file(filename);
     if (file.is_open()) {
         while (getline(file, line)) {
@@ -52,25 +38,6 @@ int main(int argc, char *argv[]) {
         std::cerr << "Unable to open file " << filename << std::endl;
         return EXIT_FAILURE;
     }
-
-    /*while (!line->GetEnded()) {
-        Token* token = lexer.NextToken();
-
-        if (token->GetType() == TOKEN_LABEL) {
-            auto t = dynamic_cast<FindLabelToken *>(token);
-        } else if (token->GetType() == TOKEN_OPERATOR) {
-            auto t = dynamic_cast<FindOperatorToken *>(token);
-
-            if (t->value.has_value()) {
-                auto v = t->value.value();
-                cout << t->op << endl;
-            } else {
-                cout << "no value" << endl;
-            }
-        }
-
-        delete token;
-    }*/
 
     return 0;
 }
