@@ -1,5 +1,5 @@
 # Lines
-A simple language based on a one-dimensional 16-bit unsigned integer array.  
+A simple programing language based on a one-dimensional 16-bit unsigned integer array.  
 The language takes inspiration from the [Brainfuck](https://en.wikipedia.org/wiki/Brainfuck) language, although it differs in a few major ways.
 
 Lines is capable of modifying cells in the array using simple yet powerful core [operators](#operators).
